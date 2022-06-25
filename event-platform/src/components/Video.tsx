@@ -5,7 +5,6 @@ import { gql, useQuery } from "@apollo/client";
 import '@vime/core/themes/default.css';
 
 
-
 const GET_LESSON_BY_SLUG_QUERY = gql`
     query GetLessonBySlug ($slug: String) {
         lesson(where: {slug: $slug}) {
@@ -42,11 +41,8 @@ export function Video(props: VideoProps) {
     const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
         variables: {
             slug: props.lessonSlug,
-        }  
-    } 
-    
- )
-
+        }     
+    })
 
 
     if (!data) {
