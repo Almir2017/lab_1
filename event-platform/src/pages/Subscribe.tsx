@@ -53,7 +53,7 @@ export function Subscribe() {
                         <input 
                             className="bg-gray-900 rounded px-5 h-14"
                             type="email"
-                            placeholder="Gigite seu e-mail" 
+                            placeholder="Digite seu e-mail" 
                             onChange={event => setEmail(event.target.value)}
                         />
 
